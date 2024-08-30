@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:#FFFFFB;
+    display: block;
+    text-align: right;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+a:hover{
+    color: #09e85e;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background: rgb(9,232,94);
+    background: linear-gradient(90deg, rgba(9,232,94,1) 0%, rgba(166,130,255,1) 51%, rgba(113,90,255,1) 89%);
+    background-size: cover;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+.image{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.image img{
+    width: 700px;
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.container-form img{
+    width: 100px;
+    border-radius: 100px;
+    border: 2px #FFFFFB solid;
+}
+form{
+    width: 360px;
+}
+.container-form h1{
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    margin: 15px 0;
+    color:#FFFFFB;
+}
+
+.label{
+    display: grid;
+    grid-template-columns: 6% 94%;
+    margin: 25px 0;
+    padding: 2px 0;
+    border-bottom: 1px solid #FFFFFB;
+    position: relative;
+}
+.label::before, .label::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: -1px;
+    width: 0;
+    background-color: #09e85e;
+    transition: .5s;
+}
+.label::before{
+    left: 50%;
+}
+.label::after{
+    right: 50%;
+}
+.label.focus::before,.label.focus::after{
+    width: 50%;
+}
+.user-ico{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFB;
+}
+.one{
+    margin-top: 0;
+}
+.two{
+    margin-bottom: 1.5rem;
+}
+i{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transition: .5s;
+}
+.label >div{
+    height: 45px;
+    position: relative;
+}
+.label >div h5{
+    position: absolute;
+    color: #FFFFFB;
+    text-transform: capitalize;
+    font-size: 18px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.label >div input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: none;
+    background:none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    padding: 0 10px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.label.focus .user-ico i{
+    color: #09E85E/*Verde focus*/;
+}
+.label.focus .input h5{
+    top: -5px;
+    font-size: 15px;
+
+}
+.btn{
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    background-color: #FFFFFB;
+    color: #1A0723;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 5px 0;
+    cursor: pointer;
+    background-size: 200%;
+    outline: none;
+}
+
+@media (max-width: 1050px){
+    .container{
+        grid-gap: 5rem;
+    }
+}
+
+@media (max-width: 1000px){
+    form{
+        width: 290px;
+    }
+    .container-form h1{
+        font-size: 2rem;
+        margin:8px 0;
+    }
+    .image img{
+        width: 400px;
+    }
+}
+@media (max-width: 1024px){
+    .container{
+        grid-gap: 3rem;
+    }
+    form{
+        width: 190px;
+    }
+    .container-form h1{
+        font-size: 1.5rem;
+        margin:8px 0;
+    }
+    .image img{
+        width: 300px;
+    }
+}
+@media (max-width:900px){
+    .image{
+        display: none;
+    }
+    .container{
+        grid-template-columns:1fr;
+        
+    }
+    .container-form{
+        justify-content: center;
+    }
+}
